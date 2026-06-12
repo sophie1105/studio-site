@@ -1,0 +1,129 @@
+---
+name: portfolio-studio-site
+description: Design, plan, build, review, or improve personal portfolio websites, studio websites, creative practice sites, case-study portfolios, visual archives, and service-oriented independent creator sites. Use when Codex needs to turn a person, studio, body of work, case studies, images, services, or brand direction into a polished website with strong information architecture, visual direction, frontend implementation guidance, responsive behavior, content structure, SEO, performance, and conversion paths.
+---
+
+# Portfolio Studio Site
+
+## Operating Principle
+
+Make the work, person, or studio legible before making the site clever. Treat the website as a decision surface: visitors should quickly understand who this is, what kind of work they do, why it is credible, and what to do next.
+
+## First Pass
+
+Start by identifying four things from the user's materials or by asking only if missing:
+
+1. Primary goal: showcase, inquiries, hiring, sales, press, archive, audience building, or experimental expression.
+2. Audience: clients, recruiters, collaborators, collectors, fans, students, curators, or peers.
+3. Core material: projects, images, videos, writing, services, credentials, testimonials, process, or productized offers.
+4. Desired tone: quiet gallery, editorial, technical, luxury, playful, experimental, commercial, academic, or utilitarian.
+
+If the user has not supplied enough content, create a useful placeholder content model and label assumptions clearly. Do not wait for perfect inputs when a reasonable first version can be built.
+
+## Site Type Decision
+
+Choose the dominant type, then adapt the structure:
+
+- Portfolio: emphasize selected work, visual browsing, concise project details, and contact.
+- Personal brand: emphasize identity, expertise, point of view, proof, writing, and links.
+- Studio site: emphasize services, case studies, clients, process, team, and inquiries.
+- Case-study portfolio: emphasize problem, role, process, solution, outcomes, and reflection.
+- Archive/gallery: emphasize media quality, taxonomy, pacing, filtering, and image performance.
+- Service landing site: emphasize offer clarity, proof, packages or process, objection handling, and conversion.
+- Experimental site-as-work: make interaction part of the work, but preserve orientation, accessibility, and contact.
+
+For deeper examples and IA patterns, read `references/patterns.md`.
+
+## Product Workflow
+
+1. Define the visitor journey.
+   - Landing: answer "what is this and why should I care?"
+   - Browsing: let visitors compare work without friction.
+   - Deepening: provide project context, role, process, and outcomes.
+   - Trust: add credentials, clients, testimonials, press, awards, metrics, or recognizable collaborators.
+   - Action: make email, booking, resume, purchase, or social follow obvious.
+
+2. Select content ruthlessly.
+   - Prefer 6-12 strong projects over a large uneven archive.
+   - Put the most representative work first, not necessarily the newest.
+   - Use project summaries that state medium, role, year, and result.
+   - Avoid generic claims unless paired with proof.
+
+3. Model the content.
+   - Define project fields before building UI: title, slug, year, discipline, role, client, cover image, gallery, summary, challenge, approach, outcome, links, credits, tags.
+   - Keep projects in Markdown, MDX, JSON, CMS, or database records when the site will be updated.
+   - Hard-code only tiny sites where future editing is unlikely.
+
+4. Design conversion paths.
+   - Use persistent or repeated contact entry points on commercial sites.
+   - Include a specific call to action near proof-heavy sections.
+   - For hiring, include resume/CV, role clarity, and project responsibilities.
+   - For studios, include service scope and engagement model before contact.
+
+## Design Workflow
+
+1. Establish the first-viewport signal.
+   - The hero must reveal the person/studio/product/work immediately.
+   - Avoid template-like generic headlines. Use a literal name, practice, offer, or creative domain.
+   - Show actual work or meaningful media early; do not hide all evidence below the fold.
+
+2. Let the work lead.
+   - Use restraint in decoration, gradients, cards, and copy.
+   - Match layout density to the practice: galleries can breathe; business services need scannable proof; technical portfolios need context and links.
+   - Make image crops intentional and stable across breakpoints.
+
+3. Create visual identity through specific choices.
+   - Choose typography, spacing, motion, color, and image treatment to match the user's domain.
+   - Avoid one-note palettes and overused generic dark/purple/cream looks unless the brand demands them.
+   - Use icons for compact controls and familiar actions where appropriate.
+
+4. Design responsive behavior first-class.
+   - Check mobile navigation, image aspect ratios, long titles, CTA placement, and gallery controls.
+   - Use fixed aspect ratios or responsive constraints for grids, covers, tiles, and carousels to prevent layout shift.
+   - Ensure text never overlaps or overflows buttons, cards, or media.
+
+5. Use motion carefully.
+   - Motion should help pacing, transition, or reveal hierarchy.
+   - Avoid scroll effects that make browsing work slower or inaccessible.
+   - Respect reduced-motion preferences.
+
+## Technical Workflow
+
+Prefer the simplest architecture that preserves image quality, speed, and maintainability.
+
+- Static-first frameworks: Astro, Next.js, Nuxt, SvelteKit, Eleventy, or plain HTML for very small sites.
+- Content: Markdown/MDX/JSON/CMS collections for projects; avoid scattering project data through components.
+- Images: responsive sizes, explicit dimensions, lazy loading below the fold, modern formats, and careful compression.
+- Media: poster frames for video, deferred embeds, captions/credits where relevant.
+- SEO: unique title/description, Open Graph image, semantic HTML, sitemap, robots, canonical URLs, alt text.
+- Accessibility: keyboard navigation, focus states, color contrast, alt text, labels, reduced motion, semantic landmarks.
+- Performance: optimized fonts, no unnecessary animation libraries, avoid huge first-screen media, test Lighthouse/Core Web Vitals.
+- Deployment: Vercel, Netlify, Cloudflare Pages, GitHub Pages, or static hosting as appropriate.
+- Forms: use a reliable form provider, email API, booking link, or mailto only for very simple sites.
+- Analytics: add privacy-friendly analytics when the site has business goals.
+
+When building with an existing repo, follow the existing framework, component system, CSS conventions, and content source. Do not introduce a new stack just because it is fashionable.
+
+## Implementation Checklist
+
+Use this checklist before final delivery:
+
+- Clear site type and primary goal.
+- Homepage communicates identity/work/offer in the first viewport.
+- Project list is browsable and selected work is prioritized.
+- Project detail pages include enough context to prove contribution and quality.
+- Contact or next action is obvious.
+- Mobile layout is deliberately designed, not merely squeezed.
+- Images have stable dimensions, responsive variants, and sensible alt text.
+- Navigation works with keyboard and small screens.
+- SEO metadata and social preview are present.
+- Performance is checked, especially image weight and font loading.
+- Visual QA is performed in browser screenshots for desktop and mobile after frontend changes.
+
+## Output Expectations
+
+When asked to design, return a concrete site concept: type, audience, IA, homepage sections, project detail structure, visual direction, content model, and implementation approach.
+
+When asked to build, implement the site, run the local app if needed, verify it in browser/screenshots, and report the URL plus key files changed.
+
+When asked to review, lead with issues that harm clarity, credibility, conversion, accessibility, performance, or maintainability, with file/line references when available.
