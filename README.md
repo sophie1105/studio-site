@@ -1,7 +1,7 @@
 [README.md](https://github.com/user-attachments/files/28868712/README.md)
 # Portfolio Studio Site Skill
 
-`portfolio-studio-site` 是一个用于设计、规划、构建和评审个人/工作室作品网站的 Codex Skill。它帮助 Codex 把一个人、工作室、一组作品、案例研究、服务能力或品牌方向，转化成清晰、好看、可维护、可上线的网站方案。
+`portfolio-studio-site` 是一个用于设计、规划、构建个人/工作室作品网站的Skill。它帮助使用者把一个人、工作室、一组作品、案例研究、服务能力或品牌方向，转化成清晰、好看、可维护、可上线的网站方案。
 
 这个 Skill 适合用于：
 
@@ -43,24 +43,24 @@
 
 ## 使用方式
 
-在 Codex 中可以这样调用：
+在Claude Code/Codex 中可以这样调用：
 
 ```text
-Use $portfolio-studio-site to design a website for my photography studio.
+使用 $portfolio-studio-site 为我的摄影工作室设计一个网站。
 ```
 
-也可以用于更具体的任务：
+也可用于更具体的任务：
 
 ```text
-Use $portfolio-studio-site to plan a personal portfolio for a product designer.
-```
-
-```text
-Use $portfolio-studio-site to review this studio website and identify clarity, design, performance, and conversion issues.
+使用 $portfolio-studio-site 为一位产品设计师设计个人作品集网站。
 ```
 
 ```text
-Use $portfolio-studio-site to build a minimal portfolio site from these project images and descriptions.
+使用 $portfolio-studio-site 评估此工作室网站，并找出在清晰度、设计、性能和转化率方面存在的问题。
+```
+
+```text
+使用 $portfolio-studio-site 根据这些项目图片和描述构建一个极简风格的作品集网站。
 ```
 
 ## 典型输出
@@ -77,7 +77,7 @@ Use $portfolio-studio-site to build a minimal portfolio site from these project 
 - 技术实现建议
 - SEO、性能、移动端和可访问性检查点
 
-当用于构建网站时，它会指导 Codex：
+当用于构建网站时，它会指导 Claude Code/Codex：
 
 - 选择或遵循现有前端技术栈
 - 创建可维护的项目数据结构
@@ -116,6 +116,6 @@ portfolio-studio-site/
 
 这个 Skill 的核心判断是：
 
-> 先让作品、个人或工作室变得清楚可信，再让网站变得聪明好看。
+> 先让作品、个人或工作室变得清楚可信，再让网站变得酷炫好看。
 
 作品网站不只是视觉展示，而是一个帮助访问者做判断的界面。好的网站应该让人快速知道你是谁、做什么、有什么代表作品、为什么可信，以及下一步该如何联系或合作。
